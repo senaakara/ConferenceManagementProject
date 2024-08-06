@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#submit-paper">Submit Paper</a></li>
+                <li><a href="#review-papers">Review Papers</a></li>
+                <li><a href="conference-program.html">Conference Program</a></li>
+                <li><a href="user-management.html">User Management</a></li>
+                <li><a href="conference-setup.html">Conference Setup</a></li>
+                <li><a href="program-scheduling.html">Program Scheduling</a></li>
+                <li><a href="on-site-management.html">On-site Management</a></li>
+                <li><a href="post-conference.html">Post-Conference</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to the Conference Management System</h1>
+            <p>This system is designed to facilitate the management of academic, professional, and corporate conferences.</p>
+        </section>
+        <section id="submit-paper">
+            <h1>Submit Paper</h1>
+            <form id="paper-submission-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"><br><br>
+                <label for="abstract">Abstract:</label>
+                <textarea id="abstract" name="abstract"></textarea><br><br>
+                <label for="keywords">Keywords:</label>
+                <input type="text" id="keywords" name="keywords"><br><br>
+                <label for="file">File:</label>
+                <input type="file" id="file" name="file"><br><br>
+                <input type="submit" value="Submit Paper">
+            </form>
+        </section>
+        <section id="review-papers">
+            <h1>Review Papers</h1>
+            <table id="paper-list">
+                <thead>
+                    <tr>
+                        <th>Paper Title</th>
+                        <th>Abstract</th>
+                        <th>Keywords</th>
+                        <th>File</th>
+                        <th>Reviewer</th>
+                        <th>Rating Result</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="paper-list-body">
+                    <!-- Papers will be loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+        
+        
+        <section id="register">
+            <h1>Register</h1>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="role">Role:</label>
+                <select id="role" name="role">
+                    <option value="administrator">Conference Administrator</option>
+                    <option value="reviewer">Reviewer</option>
+                    <option value="author">Author</option>
+                    <option value="presenter">Presenter</option>
+                    <option value="attendee">Attendee</option>
+                </select><br><br>
+                <input type="submit" value="Register">
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

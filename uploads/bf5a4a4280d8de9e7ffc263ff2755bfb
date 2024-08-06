@@ -1,0 +1,28 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    generateRandomNT();
+    document.getElementById('gravity-button').addEventListener('click', applyGravity);
+});
+
+function generateRandomNT() {
+    const container = document.getElementById('nt-container');
+    container.innerHTML = ''; // Clear previous content
+    for (let i = 0; i < 100; i++) {
+        let span = document.createElement('span');
+        span.innerText = getRandomNT() + ' ';
+        container.appendChild(span);
+    }
+}
+
+function getRandomNT() {
+    const variants = ['nT', 'Nt', 'nt', 'NT'];
+    return variants[Math.floor(Math.random() * variants.length)];
+}
+
+function applyGravity() {
+    document.querySelectorAll('#nt-container span').forEach(span => {
+        span.style.transition = 'all 2s';
+        span.style.transform = 'translateY(100vh)';
+        span.style.opacity = 0;
+    });
+}
